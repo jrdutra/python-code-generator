@@ -4,16 +4,17 @@ from typing import Any
 LETTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
            'J', 'k', 'L', 'm', 'n', 'p',
            'r', 's', 't', 'x', 'z']
+NUMBERS = ['2', '3', '4', '5', '6', '7', '8', '9']
 qt_char1 = 3
 qt_char2 = 3
 qt_char3 = 3
 qt_char4 = 3
-qt_char5 = 4
-qt_char6 = 4
-qt_char6 = 4
+qt_char5 = 6
+qt_char6 = 6
 qt_code = 200
 code_vector = []
-f = open('codigos.txt', 'w')
+f = open('codigos.csv', 'w')
+f.write("Codigo;Protocolo\n")
 for i in range(0, qt_code):
     verify = True  # resseta o verify
     str_code = ""
@@ -38,11 +39,11 @@ for i in range(0, qt_code):
             index = int(random.randrange(0, 19))
             str_code4.append(LETTERS[index])
         for j in range(0, qt_char5):  # gera
-            index = int(random.randrange(0, 19))
-            str_code5.append(LETTERS[index])
+            index = int(random.randrange(0, 7))
+            str_code5.append(NUMBERS[index])
         for j in range(0, qt_char6):  # gera
-            index = int(random.randrange(0, 19))
-            str_code6.append(LETTERS[index])
+            index = int(random.randrange(0, 7))
+            str_code6.append(NUMBERS[index])
         str_code = "".join(str_code1) + " " + "".join(str_code2) + " " + \
                    "".join(str_code3) + " " + "".join(str_code4) + " " + \
                    "".join(str_code5) + " " + "".join(str_code6)
@@ -52,5 +53,5 @@ for i in range(0, qt_code):
                 print("Repetido em " + str(k))
                 verify = True  # caso repetido, gera novamente
     code_vector.append("".join(str_code))
-    f.write(str_code + "," + str(i).zfill(5) + "\n")
+    f.write(str_code + ";" + str(i).zfill(5) + "\n")
 f.close()
