@@ -6,8 +6,9 @@ LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
            'Q', 'R', 'S', 'T', 'U', 'V','W', 'X',
            'Y', 'Z']
 qt_char = 5
-qt_code = 10
+qt_code = 200
 code_vector = []
+f = open('codigos.txt', 'w')
 for i in range(0, qt_code):
     verify = True  # resseta o verify
     str_code = []
@@ -22,5 +23,5 @@ for i in range(0, qt_code):
                 print("Repetido em " + str(k))
                 verify = True  # caso repetido, gera novamente
     code_vector.append(str_code[:])
-print(code_vector)
-print(len(code_vector))
+    f.write("Código de Verificação: " + "".join(str_code[:]) + "Protocolo Nº: " + str(i) + "\n")
+f.close()
