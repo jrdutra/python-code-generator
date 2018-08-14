@@ -2,9 +2,8 @@ import random
 from typing import Any
 
 LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-           'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
-           'Q', 'R', 'S', 'T', 'U', 'V','W', 'X',
-           'Y', 'Z']
+           'J', 'K', 'L', 'M', 'N', 'P',
+           'R', 'S', 'T', 'X', 'Z']
 qt_char1 = 3
 qt_char2 = 3
 qt_char3 = 3
@@ -27,22 +26,22 @@ for i in range(0, qt_code):
     while verify:
         verify = False
         for j in range(0, qt_char1):  # gera
-            index = int(random.randrange(0, 26))
+            index = int(random.randrange(0, 19))
             str_code1.append(LETTERS[index])
         for j in range(0, qt_char2):  # gera
-            index = int(random.randrange(0, 26))
+            index = int(random.randrange(0, 19))
             str_code2.append(LETTERS[index])
         for j in range(0, qt_char3):  # gera
-            index = int(random.randrange(0, 26))
+            index = int(random.randrange(0, 19))
             str_code3.append(LETTERS[index])
         for j in range(0, qt_char4):  # gera
-            index = int(random.randrange(0, 26))
+            index = int(random.randrange(0, 19))
             str_code4.append(LETTERS[index])
         for j in range(0, qt_char5):  # gera
-            index = int(random.randrange(0, 26))
+            index = int(random.randrange(0, 19))
             str_code5.append(LETTERS[index])
         for j in range(0, qt_char6):  # gera
-            index = int(random.randrange(0, 26))
+            index = int(random.randrange(0, 19))
             str_code6.append(LETTERS[index])
         str_code = "".join(str_code1) + " " + "".join(str_code2) + " " + \
                    "".join(str_code3) + " " + "".join(str_code4) + " " + \
