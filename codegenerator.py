@@ -2,7 +2,7 @@ import random
 from typing import Any
 
 LETTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-           'j', 'k', 'L', 'm', 'n', 'p',
+           'J', 'k', 'L', 'm', 'n', 'p',
            'r', 's', 't', 'x', 'z']
 qt_char1 = 3
 qt_char2 = 3
